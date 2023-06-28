@@ -15,14 +15,16 @@ function Livins() {
   this.scrolled = 0;
   this.currentLevel = 0;
   this.levels = 7;
-  this.distance3d = 1000;
+  this.distance3d = 1200;
   this.levelGuide = {
-    '#intro' : 0,
+    '#s0' : 0,
     '#s1' : 1,
     '#s2' : 2,
     '#s3' : 3,
     '#s4' : 4,
-    '#5s' : 5
+    '#5s' : 5,
+    '#6s' : 6,
+    '#7s' : 7,
   };
   
   // cache some jQuery objects
@@ -65,7 +67,7 @@ Livins.prototype.getScroll3DTransform = function( scroll ) {
   if ( leveledZ < 5 ) {
     z = Math.round( z / this.distance3d ) * this.distance3d;
   }  
-  return 'translate3d( 0, 0, ' + z + 'px )';
+  return 'translate3d( 0, -40px, ' + z + 'px )';
 };
 
 Livins.prototype.scroll = function( event ) {

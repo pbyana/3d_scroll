@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,html{
+        height:100%;
+    }
+    html {
+        overflow-y: scroll;
+    }
+    main{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+    #container{
+        margin: 0 auto;
+        width: 990px;
+        position: relative;
+        height: 540px;
+        padding-top:20vh;
+    }
+    .wrapper{
+        width: 100%;
+        height: 540px;
+        perspective: 500px;
+        perspective-origin: center 450px;
+    }
+    .csstransforms #content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    .csstransforms #content section {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .csstransforms3d #intro {
+    }
+    .csstransforms3d #s1 {
+        transform: translate3d( 0, 0, -1000px );
+    }
+    .csstransforms3d #s2 {
+        transform: translate3d( 0, 0, -2000px );
+    }
+    .csstransforms3d #s3 {
+        transform: translate3d( 0, 0, -3000px );
+    }
+    .csstransforms3d #s4 {
+        transform: translate3d( 0, 0, -4000px );
+    }
+    .csstransforms3d #s5 {
+        transform: translate3d( 0, 0, -5000px );
+    }
+    .lr-wrp{
+        display: flex;
+        justify-content: space-between;
+        height:100%;
+        width:100%;
+    }
+    .lr-wrp .l, .lr-wrp .r{
+        width:28%;
+        height:100%;
+        background-color:#a1a1a1;
+        border:1px solid #fff;
+    }
+    .csstransforms #scroll-proxy {
+        height: 4300px;
+    }
+  </style>
+</head>
+<body>
+    <main>
+        <div id="offset"></div>
+        <div id="container">
+            <div class="wrapper">
+                <div id="content">
+                    <section id="intro">
+                    イントロ
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>
+                    </section>
+                    <section id="s1">
+                    セクション1
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>
+                    </section>
+                    <section id="s2">
+                    セクション2
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>
+                    </section>
+                    <section id="s3">
+                    セクション3
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>
+                    </section>
+                    <section id="s4">
+                    セクション4
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>                    
+                    </section>
+                    <section id="s5">
+                    セクション5
+                        <div class="lr-wrp">
+                            <div class="l"></div>
+                            <div class="r"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="scroll-proxy"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/modernizr-custom.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
